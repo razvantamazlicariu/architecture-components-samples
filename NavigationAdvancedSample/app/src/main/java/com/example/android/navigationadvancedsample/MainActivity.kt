@@ -29,7 +29,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
  */
 class MainActivity : AppCompatActivity() {
 
-    private var currentNavController: LiveData<NavController>? = null
+//    private var currentNavController: LiveData<NavController>? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -53,24 +53,24 @@ class MainActivity : AppCompatActivity() {
     private fun setupBottomNavigationBar() {
         val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottom_nav)
 
-        val navGraphIds = listOf(R.navigation.home, R.navigation.list, R.navigation.form)
-
-        // Setup the bottom navigation view with a list of navigation graphs
-        val controller = bottomNavigationView.setupWithNavController(
-            navGraphIds = navGraphIds,
-            fragmentManager = supportFragmentManager,
-            containerId = R.id.nav_host_container,
-            intent = intent
-        )
-
-        // Whenever the selected controller changes, setup the action bar.
-        controller.observe(this, Observer { navController ->
-            setupActionBarWithNavController(navController)
-        })
-        currentNavController = controller
+//        val navGraphIds = listOf(R.navigation.home, R.navigation.list, R.navigation.form)
+//
+//        // Setup the bottom navigation view with a list of navigation graphs
+//        val controller = bottomNavigationView.setupWithNavController(
+//            navGraphIds = navGraphIds,
+//            fragmentManager = supportFragmentManager,
+//            containerId = R.id.nav_host_container,
+//            intent = intent
+//        )
+//
+//        // Whenever the selected controller changes, setup the action bar.
+//        controller.observe(this, Observer { navController ->
+//            setupActionBarWithNavController(navController)
+//        })
+//        currentNavController = controller
     }
 
-    override fun onSupportNavigateUp(): Boolean {
-        return currentNavController?.value?.navigateUp() ?: false
-    }
+//    override fun onSupportNavigateUp(): Boolean {
+//        return currentNavController?.value?.navigateUp() ?: false
+//    }
 }

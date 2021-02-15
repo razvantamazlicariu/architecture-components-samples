@@ -57,6 +57,8 @@ dependencies {
     implementation deps.navigation.runtime_ktx
     implementation deps.navigation.fragment_ktx
     implementation deps.navigation.ui_ktx
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.3.0'
 
     // Android Testing Support Library's runner and rules
     androidTestImplementation deps.atsl.runner
