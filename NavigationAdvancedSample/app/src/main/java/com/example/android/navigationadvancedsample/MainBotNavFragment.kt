@@ -37,19 +37,12 @@ class MainBotNavFragment : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
-        // Inflate the layout for this fragment
         val view =  inflater.inflate(R.layout.fragment_main_bot_nav, container, false)
         setupBottomNavigationBar(view)
         return view;
     }
 
     private fun setupBottomNavigationBar(view: View) {
-
-//        val navController = Navigation.findNavController(view, R.id.activity_main_nav_host_fragment)
-//        val navController = findViewNavController(view)
-
-//        NavigationUI.setupWithNavController(bottomNavigationView, controller!!)
-
         val navGraphIds = listOf(R.navigation.home, R.navigation.list, R.navigation.form)
 
         val bottomNavigationView = view.findViewById<BottomNavigationView>(R.id.bottom_nav)
@@ -60,7 +53,6 @@ class MainBotNavFragment : Fragment() {
                 intent = activity!!.intent
         )
 
-        // Whenever the selected controller changes, setup the action bar.
         controller.observe(viewLifecycleOwner, Observer { navController ->
 //            setupActionBarWithNavController(navController)
         })
@@ -69,30 +61,6 @@ class MainBotNavFragment : Fragment() {
 
     fun onSupportNavigateUp(): Boolean {
         return currentNavController?.value?.navigateUp() ?: false
-    }
-
-    private fun findViewNavController(view: View?): NavController? {
-        var view = view
-        while (view != null) {
-            val controller = getViewNavController(view)
-            if (controller != null) {
-                return controller
-            }
-            val parent = view.parent
-            view = if (parent is View) (parent as View) else null
-        }
-        return null
-    }
-
-    private fun getViewNavController(view: View): NavController? {
-        val tag = view.getTag(R.id.nav_controller_view_tag)
-        var controller: NavController? = null
-        if (tag is WeakReference<*>) {
-            controller = (tag as WeakReference<NavController?>).get()
-        } else if (tag is NavController) {
-            controller = tag
-        }
-        return controller
     }
 
     companion object {
