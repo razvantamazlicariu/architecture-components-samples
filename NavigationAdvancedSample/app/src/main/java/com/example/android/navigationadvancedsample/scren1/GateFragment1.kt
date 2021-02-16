@@ -1,14 +1,14 @@
-package com.example.android.navigationadvancedsample
+package com.example.android.navigationadvancedsample.scren1
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.appcompat.app.AppCompatActivity
+import android.widget.Button
 import androidx.navigation.fragment.findNavController
-import androidx.navigation.ui.NavigationUI
-import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.example.android.navigationadvancedsample.NavControllerContainer
+import com.example.android.navigationadvancedsample.R
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -17,10 +17,10 @@ private const val ARG_PARAM2 = "param2"
 
 /**
  * A simple [Fragment] subclass.
- * Use the [StartFragment.newInstance] factory method to
+ * Use the [GateFragment1.newInstance] factory method to
  * create an instance of this fragment.
  */
-class StartFragment : Fragment() {
+class GateFragment1 : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
@@ -35,8 +35,14 @@ class StartFragment : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
-        val view =  inflater.inflate(R.layout.fragment_start, container, false)
-//        NavControllerContainer.startNavController =
+        // Inflate the layout for this fragment
+        val view =  inflater.inflate(R.layout.fragment_gate1, container, false)
+        view.findViewById<Button>(R.id.btn_enter).setOnClickListener {
+            val startNavController = NavControllerContainer.startNavController
+            startNavController?.navigate(R.id.action_gateBotomNav_to_mainBotNavFragment3)
+//            findNavController().navigate(R.id.action_gateBotomNav_to_mainBotNavFragment3)
+        }
+
         return view;
     }
 
@@ -47,12 +53,12 @@ class StartFragment : Fragment() {
          *
          * @param param1 Parameter 1.
          * @param param2 Parameter 2.
-         * @return A new instance of fragment StartFragment.
+         * @return A new instance of fragment GateFragment1.
          */
         // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
-                StartFragment().apply {
+                GateFragment1().apply {
                     arguments = Bundle().apply {
                         putString(ARG_PARAM1, param1)
                         putString(ARG_PARAM2, param2)

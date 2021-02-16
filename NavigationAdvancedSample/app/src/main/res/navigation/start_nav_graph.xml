@@ -3,19 +3,19 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/start_nav_graph"
-    app:startDestination="@id/title3">
+    app:startDestination="@id/gateBotomNav">
 
     <fragment
-        android:id="@+id/title3"
-        android:name="com.example.android.navigationadvancedsample.homescreen.Title"
-        android:label="fragment_title"
-        tools:layout="@layout/fragment_title" >
+        android:id="@+id/gateBotomNav"
+        android:name="com.example.android.navigationadvancedsample.scren1.GateBotomNav"
+        android:label="fragment_gate_botom_nav"
+        tools:layout="@layout/fragment_gate_botom_nav" >
         <action
-            android:id="@+id/action_title3_to_mainBotNavFragment2"
-            app:destination="@id/mainBotNavFragment2" />
+            android:id="@+id/action_gateBotomNav_to_mainBotNavFragment3"
+            app:destination="@id/mainBotNavFragment3" />
     </fragment>
     <fragment
-        android:id="@+id/mainBotNavFragment2"
+        android:id="@+id/mainBotNavFragment3"
         android:name="com.example.android.navigationadvancedsample.MainBotNavFragment"
         android:label="fragment_main_bot_nav"
         tools:layout="@layout/fragment_main_bot_nav" />

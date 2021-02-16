@@ -48,4 +48,6 @@
     <string name="cd_form">Form</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="gate1">Gate1</string>
+    <string name="gate_2">Gate 2</string>
 </resources>

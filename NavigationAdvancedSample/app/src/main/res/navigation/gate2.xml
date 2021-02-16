@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/gate2"
+    app:startDestination="@id/gateFragment2">
+
+    <fragment
+        android:id="@+id/gateFragment2"
+        android:name="com.example.android.navigationadvancedsample.scren1.GateFragment2"
+        android:label="fragment_gate2"
+        tools:layout="@layout/fragment_gate2" >
+        <action
+            android:id="@+id/action_gateFragment2_to_leaderboard2"
+            app:destination="@id/leaderboard2" />
+    </fragment>
+    <fragment
+        android:id="@+id/leaderboard2"
+        android:name="com.example.android.navigationadvancedsample.listscreen.Leaderboard"
+        android:label="fragment_leaderboard"
+        tools:layout="@layout/fragment_leaderboard" />
+</navigation>
