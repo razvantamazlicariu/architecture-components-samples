@@ -30,37 +30,15 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
  */
 class MainActivity : AppCompatActivity() {
 
-//    private var currentNavController: LiveData<NavController>? = null
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        if (savedInstanceState == null) {
-            setupBottomNavigationBar()
-        } // E
         setupActionBarWithNavController(findNavController(R.id.nav_host_fragment))
-
         NavControllerContainer.startNavController = findNavController(R.id.nav_host_fragment)
-// lse, need to wait for onRestoreInstanceState
-    }
-
-    override fun onRestoreInstanceState(savedInstanceState: Bundle?) {
-        super.onRestoreInstanceState(savedInstanceState)
-        setupBottomNavigationBar()
     }
 
     override fun onSupportNavigateUp(): Boolean {
         val navController = findNavController(R.id.nav_host_fragment)
         return navController.navigateUp() || super.onSupportNavigateUp()
     }
-
-    /**
-     * Called on first creation and when restoring state.
-     */
-    private fun setupBottomNavigationBar() {
-    }
-
-//    override fun onSupportNavigateUp(): Boolean {
-//        return currentNavController?.value?.navigateUp() ?: false
-//    }
 }

@@ -6,13 +6,6 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="com.example.android.navigationadvancedsample.MainActivity">
-
-<!--        <fragment-->
-<!--            android:name="com.example.android.navigationadvancedsample.StartFragment"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="match_parent"-->
-<!--            android:id="@+id/fragment_start"-->
-<!--            />-->
         <fragment
             android:id="@+id/nav_host_fragment"
             android:name="androidx.navigation.fragment.NavHostFragment"
