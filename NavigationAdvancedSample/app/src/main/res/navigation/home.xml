@@ -28,12 +28,12 @@
         android:label="@string/title_home"
         tools:layout="@layout/fragment_title">
         <action
-            android:id="@+id/action_title_to_about"
-            app:destination="@id/aboutScreen"/>
+            android:id="@+id/action_titleScreen_to_mainBotNavFragment"
+            app:destination="@id/mainBotNavFragment" />
     </fragment>
     <fragment
-        android:id="@+id/aboutScreen"
-        android:name="com.example.android.navigationadvancedsample.homescreen.About"
-        android:label="@string/title_about"
-        tools:layout="@layout/fragment_about"/>
+        android:id="@+id/mainBotNavFragment"
+        android:name="com.example.android.navigationadvancedsample.MainBotNavFragment"
+        android:label="fragment_main_bot_nav"
+        tools:layout="@layout/fragment_main_bot_nav" />
 </navigation>

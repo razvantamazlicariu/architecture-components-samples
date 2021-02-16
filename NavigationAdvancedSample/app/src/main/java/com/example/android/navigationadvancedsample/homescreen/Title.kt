@@ -35,7 +35,8 @@ class Title : Fragment() {
         val view = inflater.inflate(R.layout.fragment_title, container, false)
 
         view.findViewById<Button>(R.id.about_btn).setOnClickListener {
-            findNavController().navigate(R.id.action_title_to_about)
+            findNavController().navigate(R.id.action_title3_to_mainBotNavFragment2)
+//            findNavController().navigatorProvider.
         }
         return view
     }

@@ -8,9 +8,9 @@
     tools:context="com.example.android.navigationadvancedsample.MainActivity">
 
         <fragment
-            android:name="com.example.android.navigationadvancedsample.MainBotNavFragment"
+            android:name="com.example.android.navigationadvancedsample.StartFragment"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/fragment_main_bot"
+            android:id="@+id/fragment_start"
             />
 </LinearLayout>
